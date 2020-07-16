@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PizzaStore.Domain.Models;
 
 namespace PizzaStore.Client
 {
@@ -25,9 +26,10 @@ namespace PizzaStore.Client
       // list
       List<string> cart4 = new List<string>{"", "", ""}; // initial values
       List<string> cart5 = new List<string>(); // default values
+      List<Pizza> cart6 = new List<Pizza>();
 
       //Menu(cart2);
-      Menu2(cart5);
+      Menu2(cart6);
     }
 
     static void Menu(string[] cart)
@@ -90,10 +92,11 @@ namespace PizzaStore.Client
       } while (!exit);
     }
 
-    static void Menu2(List<string> cart)
+    static void Menu2(List<Pizza> cart)
     {
       var exit = false;
       var number = 0;
+      var startup = new PizzaStore.Client.Startup();
 
       do
       {
@@ -114,22 +117,22 @@ namespace PizzaStore.Client
           switch (select)
           {
             case 1:
-              cart.Add("cheese");
+              cart.Add(startup.CreatePizza("L", "Stuffed", new List<string>{"cheese"}));
               number += 1;
               System.Console.WriteLine("added Cheese");
               break;
             case 2:
-              cart.Add("pepperoni");
+              cart.Add(startup.CreatePizza("L", "Stuffed", new List<string>{"pepperoni"}));
               number += 1;
               System.Console.WriteLine("added Pepperoni");
               break;
             case 3:
-              cart[number] = "pineapple";
+              cart.Add(startup.CreatePizza("L", "Stuffed", new List<string>{"pineapple"}));
               number += 1;
               System.Console.WriteLine("added Pineapple");
               break;
             case 4:
-              cart[number] = "custom";
+              cart.Add(startup.CreatePizza("L", "Stuffed", new List<string>{"custom"}));
               number += 1;
               System.Console.WriteLine("added Custom");
               break;
@@ -147,6 +150,8 @@ namespace PizzaStore.Client
           DisplayCart2(cart);
           exit = true;
         }
+
+        System.Console.WriteLine();
       } while (!exit);
     }
 
@@ -156,24 +161,14 @@ namespace PizzaStore.Client
       {
         System.Console.WriteLine(pizza);
       }
-
-      // for(var i=0; i < cart.Length - 1; i += 1)
-      // {
-      //   System.Console.WriteLine(cart[i]);
-      // }
     }
 
-    static void DisplayCart2(List<string> cart)
+    static void DisplayCart2(List<Pizza> cart)
     {
       foreach(var pizza in cart)
       {
         System.Console.WriteLine(pizza);
       }
-
-      // for(var i=0; i < cart.Length - 1; i += 1)
-      // {
-      //   System.Console.WriteLine(cart[i]);
-      // }
     }
   }
 }

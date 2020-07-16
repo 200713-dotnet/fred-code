@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaStore.Client", "PizzaStore.Client\PizzaStore.Client.csproj", "{3D136521-F741-4AB7-AC0E-D3FD7C01B54B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaStore.Domain", "PizzaStore.Domain\PizzaStore.Domain.csproj", "{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{3D136521-F741-4AB7-AC0E-D3FD7C01B54B}.Release|x64.Build.0 = Release|Any CPU
 		{3D136521-F741-4AB7-AC0E-D3FD7C01B54B}.Release|x86.ActiveCfg = Release|Any CPU
 		{3D136521-F741-4AB7-AC0E-D3FD7C01B54B}.Release|x86.Build.0 = Release|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Debug|x64.Build.0 = Debug|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Debug|x86.Build.0 = Debug|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Release|x64.ActiveCfg = Release|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Release|x64.Build.0 = Release|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Release|x86.ActiveCfg = Release|Any CPU
+		{D2D09A40-FA2C-46CF-AFC8-BE59C2212F2C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
