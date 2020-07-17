@@ -225,11 +225,17 @@ namespace PizzaStore.Client
             System.Console.WriteLine("added Custom");
             break;
           case 5:
-            DisplayCart3(cart);
+            DisplayCart(cart);
             break;
           case 6:
+            var fmw = new FileManager();
+            fmw.Write(cart);
             System.Console.WriteLine("thank you, goodbye!");
             exit = true;
+            break;
+          case 7:
+            var fmr = new FileManager();
+            DisplayCart(fmr.Read());
             break;
         }
 
@@ -237,7 +243,7 @@ namespace PizzaStore.Client
       } while (!exit);
     }
 
-    static void DisplayCart3(Order cart)
+    static void DisplayCart(Order cart)
     {
       foreach (var pizza in cart.Pizzas)
       {

@@ -7,13 +7,14 @@ namespace PizzaStore.Domain.Models
   {
     // STATE
     //fields
-    private string _imageUrl = "";
-    private double _diameter = 0;
+    private readonly string _imageUrl = "https://some-url";
+    private const double _diameter = 0;
+    private static string _name = "pizza";
     private List<string> _toppings = new List<string>();
 
     //properties
     public string Crust { get; }
-    public string Size { get; }
+    public string Size { get; } // size
     public List<string> Toppings
     {
       get
@@ -22,7 +23,6 @@ namespace PizzaStore.Domain.Models
       }
     }
 
-
     // BEHAVIOR
     //constructors
     public Pizza(string size, string crust, List<string> toppings)
@@ -30,6 +30,13 @@ namespace PizzaStore.Domain.Models
       Size = size;
       Crust = crust;
       Toppings.AddRange(toppings);
+    }
+
+    public Pizza()
+    {
+      Size = "";
+      Crust = "";
+      // intentionally empty
     }
 
     //methods

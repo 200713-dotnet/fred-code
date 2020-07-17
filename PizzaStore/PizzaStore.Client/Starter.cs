@@ -4,9 +4,9 @@ using PizzaStore.Domain.Models;
 
 namespace PizzaStore.Client
 {
-  internal class Starter
+  public class Starter
   {
-    internal Order CreateOrder(User user, Store store)
+    public Order CreateOrder(User user, Store store)
     {
       try
       {
@@ -21,6 +21,10 @@ namespace PizzaStore.Client
       {
         //return null;
         throw new System.Exception("we messed up");
+      }
+      finally
+      {
+        GC.Collect();
       }
     }
 
