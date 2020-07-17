@@ -18,7 +18,7 @@ namespace PizzaStore.Domain.Models
     {
       get
       {
-        return _toppings;
+        return _toppings; // backing field
       }
     }
 
